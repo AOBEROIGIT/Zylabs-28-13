@@ -15,7 +15,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
 }
 
 int main() {
-      string itemNameOne;
+    string itemNameOne;
    string itemNameTwo;
    int itemPriceOne;
    int itemPriceTwo;
