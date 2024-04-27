@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "ItemToPurchase.h"
 
 using namespace std;
 class ShoppingCart
@@ -15,9 +16,9 @@ class ShoppingCart
     string GetCustomerName();
     string GetDate();
     void AddItem(ItemToPurchase& param);
-    void RemoveItem();
+    void RemoveItem(string nameItem);
     int GetNumItemsInCart();
-    int GetCostOfCart();
+    double GetCostOfCart();
     void ModifyItem(ItemToPurchase& param);
     void PrintTotal();
     void PrintDescriptions();
