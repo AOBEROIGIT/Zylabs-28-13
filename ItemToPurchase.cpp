@@ -2,6 +2,7 @@
 using namespace std;
 
 #include "ItemToPurchase.h"
+#include <vector>
 
 /* Type your code here */
 ItemToPurchase::ItemToPurchase()

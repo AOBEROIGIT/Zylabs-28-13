@@ -2,6 +2,7 @@
 #define ITEM_TO_PURCHASE_H
 
 #include <string>
+#include <vector>
 using namespace std;
 
 /* Type your code here */
