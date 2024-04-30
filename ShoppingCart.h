@@ -6,22 +6,27 @@
 #include "ItemToPurchase.h"
 
 using namespace std;
-class ShoppingCart
-{
-    private:
-    string customerName;
-    string currentDate;
-    vector<ItemToPurchase> cartItems;
-    public:
-    string GetCustomerName();
-    string GetDate();
-    void AddItem(ItemToPurchase& param);
-    void RemoveItem(string nameItem);
-    int GetNumItemsInCart();
-    double GetCostOfCart();
-    void ModifyItem(ItemToPurchase& param);
-    void PrintTotal();
-    void PrintDescriptions();
 
+class ShoppingCart{
+   public:
+   ShoppingCart();
+   ShoppingCart(const string& name, const string& date);
+   
+   string GetCustomerName() const;
+   string GetDate() const;
+   void AddItem(const ItemToPurchase& item); 
+   void RemoveItem(const string& item);
+   void ModifyItem(const ItemToPurchase& item);
+   int GetNumItemsInCart() const;
+   int GetCostOfCart() const;
+   void PrintTotal() const ;
+   void PrintDescriptions() const;
+   
+   private:
+   string customerName;
+   string currentDate;
+   vector<ItemToPurchase> cartItems;
 };
-#endif;
+
+#endif
+   
