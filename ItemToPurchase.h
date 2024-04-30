@@ -2,29 +2,33 @@
 #define ITEM_TO_PURCHASE_H
 
 #include <string>
-#include <vector>
 using namespace std;
 
-/* Type your code here */
-class ItemToPurchase
-{
-private:
-string itemName;
-string itemDescription;
-int itemPrice;
-int itemQuantity;
+class ItemToPurchase {
 public:
-ItemToPurchase();
-ItemToPurchase(string param1, string param2, int param3, int param4);
-void SetName(string param);
-string GetName();
-void SetDescription(string param);
-string GetDescription();
-void SetPrice(int param);
-int GetPrice();
-void SetQuantity(int param);
-int GetQuantity();
-void PrintItemCost();
-void PrintItemDescription();
+    ItemToPurchase();
+    ItemToPurchase(const string& name, const string& description, int price, int quantity);
+
+    void SetName(const string& name);
+    string GetName() const;
+
+    void SetPrice(int price);
+    int GetPrice() const;
+
+    void SetQuantity(int quantity);
+    int GetQuantity() const;
+
+    void SetDescription(const string& description); 
+    string GetDescription() const; 
+
+    void PrintItemCost() const; 
+    void PrintItemDescription() const; 
+
+private:
+    string itemName;
+    string itemDescription; 
+    int itemPrice;
+    int itemQuantity;
 };
+
 #endif
