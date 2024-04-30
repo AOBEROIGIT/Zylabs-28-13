@@ -2,52 +2,57 @@
 using namespace std;
 
 #include "ItemToPurchase.h"
-#include <vector>
 
-/* Type your code here */
-ItemToPurchase::ItemToPurchase()
-{
-   itemName = "none";
-   itemDescription = "none";
-   itemPrice = 0;
-   itemQuantity = 0;
+ItemToPurchase::ItemToPurchase() {
+    itemName = "none";
+    itemDescription = "none"; 
+    itemPrice = 0;
+    itemQuantity = 0;
 }
-ItemToPurchase::ItemToPurchase(string param1, string param2, int param3, int param4)
-{
-    itemName = param1;
-    itemDescription = param2;
-    itemPrice = param3;
-    itemQuantity = param4;
+
+ItemToPurchase::ItemToPurchase(const string& name, const string& description, int price, int quantity) {
+    itemName = name;
+    itemDescription = description;
+    itemPrice = price;
+    itemQuantity = quantity;
 }
-string ItemToPurchase::GetName()
-{
-   return itemName;
+
+void ItemToPurchase::SetName(const string& name) {
+    itemName = name;
 }
-void ItemToPurchase::SetName(string param)
-{
-   itemName = param;
+
+string ItemToPurchase::GetName() const {
+    return itemName;
 }
-string ItemToPurchase::GetDescription()
-{
+
+void ItemToPurchase::SetPrice(int price) {
+    itemPrice = price;
+}
+
+int ItemToPurchase::GetPrice() const {
+    return itemPrice;
+}
+
+void ItemToPurchase::SetQuantity(int quantity) {
+    itemQuantity = quantity;
+}
+
+int ItemToPurchase::GetQuantity() const {
+    return itemQuantity;
+}
+
+void ItemToPurchase::SetDescription(const string& description) {
+    itemDescription = description;
+}
+
+string ItemToPurchase::GetDescription() const {
     return itemDescription;
 }
-void ItemToPurchase::SetDescription(string param)
-{
-    itemDescription = param;
+
+void ItemToPurchase::PrintItemCost() const {
+    cout << itemName << " " << itemQuantity << " @ $" << itemPrice << " = $" << (itemQuantity * itemPrice) << endl;
 }
-int ItemToPurchase::GetPrice()
-{
-   return itemPrice;
-}
-void ItemToPurchase::SetPrice(int param)
-{
-   itemPrice = param;
-}
-int ItemToPurchase::GetQuantity()
-{
-   return itemQuantity;
-}
-void ItemToPurchase::SetQuantity(int param)
-{
-   itemQuantity = param;
+
+void ItemToPurchase::PrintItemDescription() const {
+    cout << itemName << ": " << itemDescription << endl;
 }
